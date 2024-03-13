@@ -2,10 +2,10 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "schema.js",
+  "main": "signup.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon signup.js"
+    "start": "node signup.js"
   },
   "keywords": [],
   "author": "",
