@@ -17,20 +17,11 @@ const cors = require('cors')
  * 
 */
 
-//const port = "https://backend-6xns.onrender.com"
 const app = express()
 app.use(bodyParser.json())
-// const corsOptions =[
-//     {
-//         origin:'http://localhost:5000',
-//     },
-//     {
-//         origin:'https://backend-6xns.onrender.com/'
-//     }
-
-
-// ]
 app.use(cors())
+
+
 async function connectToDb() {
     try {
         await mongoose.connect('mongodb+srv://test:test@cluster0.4igf4wa.mongodb.net/LoginDB?retryWrites=true&w=majority&appName=Cluster0')
