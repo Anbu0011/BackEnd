@@ -17,7 +17,7 @@ const cors = require('cors')
  * 
 */
 
-const port = "https://backend-6xns.onrender.com"
+//const port = "https://backend-6xns.onrender.com"
 const app = express()
 app.use(bodyParser.json())
 // const corsOptions =[
@@ -43,7 +43,7 @@ async function connectToDb() {
 }
 
 connectToDb()
-app.listen(port || 5000, function() {
+app.listen(5000, function() {
     console.log('Listening on port 5000...')
 })
 
