@@ -21,9 +21,6 @@ const { LoginDetails } = require('./schema.js')
 const app = express()
 app.use(bodyParser.json())
 
-const cors = require('cors');
-app.use(cors());
-
 async function connectToDb() {
     try {
         await mongoose.connect('mongodb+srv://test:test@cluster0.4igf4wa.mongodb.net/LoginDB?retryWrites=true&w=majority&appName=Cluster0')
