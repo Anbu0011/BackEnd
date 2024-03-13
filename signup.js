@@ -25,16 +25,17 @@ async function connectToDb() {
     try {
         await mongoose.connect('mongodb+srv://test:test@cluster0.4igf4wa.mongodb.net/LoginDB?retryWrites=true&w=majority&appName=Cluster0')
         console.log('DB connection established ;)')
-        app.listen(5000, function() {
-            console.log('Listening on port 5000...')
-        })
+       
     } catch(error) {
         console.log(error)
         console.log('Cloudn\'t establish connection :(')
     }
 }
-connectToDb()
 
+connectToDb()
+app.listen(5000, function() {
+    console.log('Listening on port 5000...')
+})
 app.post('/add-signup', async function(request, response) {
     try {
         await LoginDetails.create({
