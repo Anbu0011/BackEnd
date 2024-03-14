@@ -60,18 +60,18 @@ app.post('/add-signup', async function(request, response) {
     }
 })
 
-app.get('/get-details', async function(request, response) {
-    try {
-        const LoginDetails = await Expense.find()
-        response.status(200).json(LoginDetails)
-    } catch(error) {
-        response.status(500).json({
-            "status" : "failure",
-            "message" : "could not fetch data",
-            "error" : error
-        })
-    }
-})
+// app.get('/get-details', async function(request, response) {
+//     try {
+//         const LoginDetails = await Expense.find()
+//         response.status(200).json(LoginDetails)
+//     } catch(error) {
+//         response.status(500).json({
+//             "status" : "failure",
+//             "message" : "could not fetch data",
+//             "error" : error
+//         })
+//     }
+// })
 
 
 app.post('/signin', async function(request, response) {
